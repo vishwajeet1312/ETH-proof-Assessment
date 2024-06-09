@@ -7,16 +7,17 @@ contract MyToken {
 
 mapping (address => uint) public Balance;
 
-function mint (address T_addres,uint T_val) public {
-      Token_TotalSupply += T_val;
-      Balance[T_addres] +=T_val;
+function mint (address Addr,uint Val) public {
+      Token_TotalSupply += Val;
+      Balance[Addr] +=Val;
 }
 
-function burn (address T_addres,uint T_val) public {
-     if(Balance[T_addres]>=T_val){
-      Token_TotalSupply -= T_val;
-      Balance[T_addres] -=T_val;
+function burn (address Addr,uint Val) public {
+     if(Balance[Addr]>=Val){
+      Token_TotalSupply -= Val;
+      Balance[Addr] -= Val;
      }
 }
-
+  
 }
+
