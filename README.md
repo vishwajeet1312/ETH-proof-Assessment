@@ -1,5 +1,3 @@
-ETH Proof Beginner Course
-
 First, we have created public variables that store the details about the coins: Token Name, Token Abbrv., and Total Supply as Token_Name, Token_Abbrv, and Token_TotalSupply, respectively.
 
 Second, we have created a public mapping of addresses to balances (address => uint) called Balance.
@@ -19,6 +17,4 @@ function burn(address Addr, uint Val) public {
         Balance[Addr] -= Val;
     }
 }
-
-
 
